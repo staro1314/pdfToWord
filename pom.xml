@@ -27,11 +27,11 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
-		<dependency>
-			<groupId>com.aspose</groupId>
-			<artifactId>aspose-pdf</artifactId>
-			<version>21.6</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>com.aspose</groupId>-->
+<!--			<artifactId>aspose-pdf</artifactId>-->
+<!--			<version>21.6</version>-->
+<!--		</dependency>-->
 
 		<dependency>
 			<groupId>com.github.houbb</groupId>
@@ -129,6 +129,15 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>21</source>
+					<target>21</target>
+					<compilerArgs>--enable-preview</compilerArgs>
 				</configuration>
 			</plugin>
 		</plugins>

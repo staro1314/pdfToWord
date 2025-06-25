@@ -10,6 +10,10 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.jar.JarOutputStream;
 
+/**
+ * 破解 aspose pdf转换工具包（去除水印，去除默认状四页限制）
+ * pdf转word破解工具
+ */
 public class PDFJarCrack {
 
     public static void main(String[] args) throws NotFoundException, CannotCompileException, IOException {

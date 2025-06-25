@@ -4,6 +4,9 @@ import com.hankcs.hanlp.HanLP;
 import lombok.val;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 全角转换为半角
+ */
 public class TranHalfWidthTest {
 
     @Test

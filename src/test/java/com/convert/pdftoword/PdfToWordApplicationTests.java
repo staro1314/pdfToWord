@@ -32,6 +32,7 @@ class PdfToWordApplicationTests {
         FileOutputStream outputStream = new FileOutputStream(wordPath);
 
         Document document = new Document(pdfPath);
+        new Document(new FileInputStream(""));
         document.save(outputStream, SaveFormat.DocX);
         outputStream.close();
     }

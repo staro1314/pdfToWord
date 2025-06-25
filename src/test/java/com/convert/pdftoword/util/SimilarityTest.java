@@ -13,6 +13,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 
+/**
+ * 文本相似度计算
+ */
 public class SimilarityTest {
 
     @Test
