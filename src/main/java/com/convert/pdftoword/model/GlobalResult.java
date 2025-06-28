@@ -16,6 +16,11 @@ public  class GlobalResult<T> {
     private String msg;
     private String errMsg;
 
+    public GlobalResult(){
+        this.code = ResultEnum.SUCCESS.getCode();
+        this.msg = ResultEnum.SUCCESS.getMsg();
+    }
+
     public GlobalResult(T data){
         this.code = ResultEnum.SUCCESS.getCode();
         this.data = data;

@@ -17,7 +17,7 @@ import java.util.concurrent.StructuredTaskScope;
 @RequestMapping("test")
 public class ThreadController {
 
-    @PostMapping("/half")
+    @PostMapping("/virtual")
     public GlobalResult<String> tranHalfWidth(@RequestParam String text) throws InterruptedException {
         if (StringUtils.isEmpty(text)){
             return GlobalResult.of(5001,"缺少必要参数");

@@ -1,7 +1,11 @@
 package com.convert.pdftoword.config.exception;
 
 import com.convert.pdftoword.config.enums.ResultEnum;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class GlobalException extends RuntimeException{
 
     private ResultEnum resultEnum;
