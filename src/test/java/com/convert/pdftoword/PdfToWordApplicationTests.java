@@ -3,10 +3,12 @@ package com.convert.pdftoword;
 import cn.afterturn.easypoi.word.entity.MyXWPFDocument;
 import com.aspose.pdf.Document;
 import com.aspose.pdf.SaveFormat;
+import com.hankcs.hanlp.HanLP;
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
 import org.apache.commons.cli.DefaultParser;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.openxml4j.opc.OPCPackage;
 import org.apache.poi.xwpf.usermodel.XWPFTable;
 import org.apache.poi.xwpf.usermodel.XWPFTableRow;
@@ -17,6 +19,7 @@ import technology.tabula.CommandLineApp;
 
 import java.io.*;
 import java.util.List;
+import java.util.stream.Collectors;
 
 //@SpringBootTest
 class PdfToWordApplicationTests {
@@ -70,5 +73,13 @@ class PdfToWordApplicationTests {
         FileWriter fw = new FileWriter("D:\\Personal\\Desktop\\test\\OUT.tsv");
         new CommandLineApp(fw,cmd).extractTables(cmd);
 //        System.out.println(sb.toString());
+    }
+
+    @Test
+    public void test(){
+        List<String> strings = List.of("1", "2", "3", "4");
+        List<String> fileList = strings.stream().takeWhile(s -> StringUtils.equalsAny(s, "1", "2", "3")).toList();
+        fileList.forEach(System.out::println);
+        HanLP.convertToSimplifiedChinese("");
     }
 }
